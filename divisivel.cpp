@@ -1,37 +1,36 @@
 #include <iostream>
 using namespace std;
 
-int main (void){
+int main() {
+    int a, b, c, d;
 
-int a, b, c, d;
-
-    printf("Digite o primeiro número:");
+    printf("Digite o primeiro número: ");
     scanf("%i", &a);
 
-    printf("Digite o segundo número:");
+    printf("Digite o segundo número: ");
     scanf("%i", &b);
 
-    printf("Digite o terceiro número:");
+    printf("Digite o terceiro número: ");
     scanf("%i", &c);
 
-    printf("Digite o quarto número:");
+    printf("Digite o quarto número: ");
     scanf("%i", &d);
 
-    if  ( a % 2 == 0 && b % 2 == 0 && c % 2 == 0 && d % 2 == 0)
-        printf("É divisivel por 2\n");
+    int numeros[] = {a, b, c, d};
 
-    else{
-        printf("Não é divisivel por 2\n");
+    for (int i = 0; i < 4; i++) {
+        printf("o Número %d:\n", numeros[i]);
+
+        if (numeros[i] % 2 == 0)
+            printf("É divisível por 2\n");
+        else
+            printf("Não é divisível por 2\n");
+
+        if (numeros[i] % 3 == 0)
+            printf("É divisível por 3\n");
+        else
+            printf("Não é divisível por 3\n");
     }
-
-
-    if  ( a % 3 == 0 && b % 3 == 0 && c % 3 == 0 && d % 3 == 0)
-        printf("É divisivel por 3\n");
-
-    else{
-        printf("Não é divisivel por 3\n");
-    }
-
 
     return 0;
 }
